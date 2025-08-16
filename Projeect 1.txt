@@ -1,0 +1,193 @@
+
+
+#include <iostream>
+#include <string>
+#include <exception>
+using namespace std;
+class Person {
+protected:
+    string name;
+    int id;
+    string password;
+public:
+    ///defult con
+    Person() {
+        this->name = "Unknown";
+        this->id = 0;
+     
+    }
+    //premter cons
+    Person(string name, int id, string password) {
+        this->name = name;
+        this->id = id;
+        this->password = password;
+    }
+    //setters
+    void setname(string name) {
+
+        this->name = name;
+    }
+    void setid(int id) {
+
+        this->id = id;
+    }
+    void setpassword(string password) {
+
+        this->password = password;
+    }
+    //getters
+    string getpassword() {
+        return password;
+    }
+    int getid() {
+        return id;
+    }
+    string getname() {
+        return name;
+    }
+    //method to print 
+    void printfo() {
+        cout << "Name = " << name << endl;
+        cout << "ID = " << id << endl;
+        cout << "Password = " << password << endl;
+    }
+};
+class Client : public Person {
+private :
+    double balance;
+public :
+    //def con
+    Client() {
+        this->balance = 0;
+      
+    }
+    //premter cons
+    Client(string name, int id, string password , double balance) : Person(name ,id ,password) {
+        this->balance = balance;
+        
+    }
+    //setters
+    void setname( const string name) {
+
+        if (name.size() >= 5 && name.size() <= 20) {
+            this->name = name;
+        }
+        else 
+            cout << "Name must be 5-20 characters\n";
+    }
+
+    void setpassword(const string password) {
+
+        if (password.size() >= 5 && name.size() <= 20) {
+            this->name = name;
+        }
+        else
+            cout << "Name must be 5-20 characters\n";
+    }
+    void setbalance(double balance) {
+        if (balance >= 1500) {
+            this->balance = balance;
+        }
+        else 
+            cout << "Balance must be at least 1500.\n";
+    }
+    Private:
+            void deposit(double deposit){
+
+            if(Amount > 1500){
+
+            Amount =+ setBalance
+
+            }
+
+            void Withdraw(double withdraw){
+
+        this->Withdraw = withdraw
+
+
+            }
+
+            void TransferTo(double Amount, string client, string &recepient){
+
+            this-> amount = Amount
+            this-> Client = client
+            this-> recepient = recepient
+
+            }
+            
+        void checkBalance (){
+         
+        this-> checkBalance = Check.
+
+        }
+
+        void client:: DisplayClient(){
+
+        cout << "Client Name" << this->name << endl;
+        cout << "Balance" << this->CheckBalance << endl;
+        cout << "Amount" << this->Amount << endl;
+
+        }
+
+
+
+};
+
+class Employee: Public person(){
+    
+private:
+    double balance;
+Public:
+    //def con
+    double balance = 0;
+    //setters
+
+    char  setName(string cons name){
+
+    if(name.size()<=5 && name.size()<= 20 ){
+    this->name = name;
+
+        }
+
+    }
+
+string setPassword(cont string name){
+    
+    if(password.size()<=8 && password.size()<=20){
+    this->password = password;
+
+    }
+
+void SetBlanace(double cont balance){
+    
+    if(balance <= 5000)
+        this->balance = balance;
+    else
+        cout << "Blanace must be less than 500"
+
+//Getters
+
+string getName(){
+    
+    return name;
+}
+
+string getPassword(){
+    
+    return password;
+}
+
+double getBalance(){
+    return balance;
+}
+
+
+}
+
+int main()
+{
+    Client  Client1("Andrew", 1000, 2500 )
+
+    Client1.DisplayClient(){} 
+}
+
